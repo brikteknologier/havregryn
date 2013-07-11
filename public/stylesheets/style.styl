@@ -1,0 +1,101 @@
+$bg_col = #232323
+
+body, html
+  margin 0px
+  padding 0px
+  background-color $bg_col
+
+body
+  overflow-x hidden
+  position relative
+
+.hero
+  // real height 1500/1125
+  $hero_height = 2000px
+  height 800px
+  width 1700px
+  background-image url(/images/nightscene.jpg)
+  background-size cover
+  position absolute
+  top 0px
+  margin-left (@width * -0.5)
+  left 50%
+  
+  
+  &:after
+  &:before
+    content ''
+    display block
+    position absolute
+    bottom 0px
+    border-bottom ($hero_height / 4) solid $bg_col
+  
+  &:before
+    border-right (@width / 2) solid transparent
+  &:after
+    border-left (@width / 2) solid transparent
+    right 0px
+
+  .brik
+    width 1000px
+    max-width 80%
+    margin 0 auto
+    display block
+    padding-top 100px
+
+.hero-imposter
+  height 800px
+  width 100%
+  position relative
+
+.hex
+  $hex_height = 800px
+  height ($hex_height / 2)
+  width 680px
+  position relative
+  
+  &:after
+  &:before
+    content ''
+    display block
+    position absolute
+    border-left (@width / 2) solid transparent
+    border-right @border-left
+    
+  &:before
+    border-bottom ($hex_height / 4) solid 
+    top ($hex_height * -0.25)
+  
+  &:after
+    border-top ($hex_height / 4) solid 
+    bottom ($hex_height * -0.25)
+
+  clear both
+  &.left
+    float right
+    margin-right 50%
+  &.right
+    float left
+    margin-left 50%
+
+  &.about
+    &:after, &:before
+      border-bottom-color #aac22c
+      border-top-color #aac22c
+
+    background-color #aac22c
+
+  &.partners
+    &:after, &:before
+      border-bottom-color #374f5a
+      border-top-color #374f5a
+
+    background-color #374f5a
+
+  &.team
+    &:after, &:before
+      border-bottom-color #FF7F66
+      border-top-color #FF7F66
+
+    background-color #FF7F66
+

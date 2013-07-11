@@ -1,0 +1,101 @@
+body,
+html {
+  margin: 0px;
+  padding: 0px;
+  background-color: #232323;
+}
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+.hero {
+  height: 800px;
+  width: 1700px;
+  background-image: url("/images/nightscene.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  margin-left: -850px;
+  left: 50%;
+}
+.hero:after,
+.hero:before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  border-bottom: 500px solid #232323;
+}
+.hero:before {
+  border-right: 850px solid transparent;
+}
+.hero:after {
+  border-left: 850px solid transparent;
+  right: 0px;
+}
+.hero .brik {
+  width: 1000px;
+  max-width: 80%;
+  margin: 0 auto;
+  display: block;
+  padding-top: 100px;
+}
+.hero-imposter {
+  height: 800px;
+  width: 100%;
+  position: relative;
+}
+.hex {
+  height: 400px;
+  width: 680px;
+  position: relative;
+  clear: both;
+}
+.hex:after,
+.hex:before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-left: 340px solid transparent;
+  border-right: 340px solid transparent;
+}
+.hex:before {
+  border-bottom: 200px solid;
+  top: -200px;
+}
+.hex:after {
+  border-top: 200px solid;
+  bottom: -200px;
+}
+.hex.left {
+  float: right;
+  margin-right: 50%;
+}
+.hex.right {
+  float: left;
+  margin-left: 50%;
+}
+.hex.about {
+  background-color: #aac22c;
+}
+.hex.about:after,
+.hex.about:before {
+  border-bottom-color: #aac22c;
+  border-top-color: #aac22c;
+}
+.hex.partners {
+  background-color: #374f5a;
+}
+.hex.partners:after,
+.hex.partners:before {
+  border-bottom-color: #374f5a;
+  border-top-color: #374f5a;
+}
+.hex.team {
+  background-color: #ff7f66;
+}
+.hex.team:after,
+.hex.team:before {
+  border-bottom-color: #ff7f66;
+  border-top-color: #ff7f66;
+}
