@@ -3,6 +3,7 @@ html {
   margin: 0px;
   padding: 0px;
   background-color: #232323;
+  font-family: Telex;
 }
 body {
   overflow-x: hidden;
@@ -10,12 +11,12 @@ body {
 }
 .hero {
   height: 800px;
-  width: 1700px;
+  width: 1632px;
   background-image: url("/images/nightscene.jpg");
   background-size: cover;
   position: absolute;
   top: 0px;
-  margin-left: -850px;
+  margin-left: -816px;
   left: 50%;
 }
 .hero:after,
@@ -24,13 +25,13 @@ body {
   display: block;
   position: absolute;
   bottom: 0px;
-  border-bottom: 500px solid #232323;
+  border-bottom: 480px solid #232323;
 }
 .hero:before {
-  border-right: 850px solid transparent;
+  border-right: 816px solid transparent;
 }
 .hero:after {
-  border-left: 850px solid transparent;
+  border-left: 816px solid transparent;
   right: 0px;
 }
 .hero .brik {
@@ -45,27 +46,119 @@ body {
   width: 100%;
   position: relative;
 }
-.hex {
-  height: 400px;
-  width: 680px;
+.greeny {
+  width: 100%;
+  background-color: #aac22c;
+}
+.big-hex {
+  height: 350px;
+  width: 595px;
   position: relative;
-  clear: both;
+  z-index: 10;
+  overflow: visible;
+  margin: -225px auto 0;
+}
+.big-hex .hero-capt {
+  color: #232323;
+  width: 535px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: -10px;
+}
+.big-hex .hero-capt:after {
+  display: block;
+  content: '';
+  height: 40px;
+  width: 300px;
+  margin: 0 auto;
+  border-bottom: 2px solid #374f5a;
+  z-index: 10;
+}
+.big-hex .hero-capt div {
+  margin: 10px 0px;
+}
+.big-hex .hero-capt .top {
+  margin-top: 0px;
+  font-size: 3.5em;
+  font-family: "Roboto Condensed";
+  font-weight: bold;
+}
+.big-hex .hero-capt .mid {
+  font-family: 'Gentium Book Basic';
+  font-size: 2em;
+  font-style: italic;
+}
+.big-hex .hero-capt .mid:before,
+.big-hex .hero-capt .mid:after {
+  content: '———';
+  display: inline-block;
+  margin: 0px 15px;
+  letter-spacing: -4px;
+}
+.big-hex .hero-capt .low {
+  font-family: "Roboto Condensed";
+  font-size: 2.5em;
+  line-height: 110%;
+}
+.big-hex .hero-sub {
+  padding-top: 30px;
+  font-size: 1.2em;
+  font-family: 'Gentium Book Basic';
+  font-weight: 400;
+  font-style: italic;
+  color: #374f5a;
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  z-index: 12;
+}
+.big-hex:after,
+.big-hex:before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-left: 297.5px solid transparent;
+  border-right: 297.5px solid transparent;
+}
+.big-hex:before {
+  border-bottom: 175px solid;
+  top: -175px;
+}
+.big-hex:after {
+  border-top: 175px solid;
+  bottom: -175px;
+}
+.big-hex.about {
+  background-color: #aac22c;
+}
+.big-hex.about:after,
+.big-hex.about:before {
+  border-bottom-color: #aac22c;
+  border-top-color: #aac22c;
+}
+.hex {
+  height: 1500px;
+  width: 2550px;
+  position: relative;
+  background-color: #232323;
 }
 .hex:after,
 .hex:before {
   content: '';
   display: block;
   position: absolute;
-  border-left: 340px solid transparent;
-  border-right: 340px solid transparent;
+  border-left: 1275px solid transparent;
+  border-right: 1275px solid transparent;
 }
 .hex:before {
-  border-bottom: 200px solid;
-  top: -200px;
+  border-bottom: 750px solid #232323;
+  top: -750px;
 }
 .hex:after {
-  border-top: 200px solid;
-  bottom: -200px;
+  border-top: 750px solid #232323;
+  bottom: -750px;
 }
 .hex.left {
   float: right;
@@ -75,27 +168,34 @@ body {
   float: left;
   margin-left: 50%;
 }
-.hex.about {
-  background-color: #aac22c;
+.hex.left + .hex.right {
+  margin-top: -1500px;
 }
-.hex.about:after,
-.hex.about:before {
-  border-bottom-color: #aac22c;
-  border-top-color: #aac22c;
+.hex.right + .hex.left {
+  margin-top: 1500px;
 }
-.hex.partners {
+.big-hex + .hex {
+  margin-top: 750px;
+}
+.hex.center {
+  position: absolute;
+  z-index: 9;
+  top: 700px;
+  height: 500px;
+  left: 50%;
+  margin-left: -1275px;
+}
+.hex.center:after {
+  display: none;
+}
+.hex.info,
+.hex.team {
   background-color: #374f5a;
 }
-.hex.partners:after,
-.hex.partners:before {
+.hex.info:after,
+.hex.team:after,
+.hex.info:before,
+.hex.team:before {
   border-bottom-color: #374f5a;
   border-top-color: #374f5a;
-}
-.hex.team {
-  background-color: #ff7f66;
-}
-.hex.team:after,
-.hex.team:before {
-  border-bottom-color: #ff7f66;
-  border-top-color: #ff7f66;
 }

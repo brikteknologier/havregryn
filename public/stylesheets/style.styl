@@ -4,6 +4,7 @@ body, html
   margin 0px
   padding 0px
   background-color $bg_col
+  font-family Telex
 
 body
   overflow-x hidden
@@ -11,9 +12,9 @@ body
 
 .hero
   // real height 1500/1125
-  $hero_height = 2000px
+  $hero_height = 1920px
   height 800px
-  width 1700px
+  width ($hero_height * 0.85)
   background-image url(/images/nightscene.jpg)
   background-size cover
   position absolute
@@ -48,11 +49,74 @@ body
   width 100%
   position relative
 
-.hex
-  $hex_height = 800px
+.greeny
+  width 100%
+  background-color #aac22c
+
+.big-hex
+  $hex_height = 700px
   height ($hex_height / 2)
-  width 680px
+  width ($hex_height * 0.85)
   position relative
+  z-index 10
+  overflow visible
+
+  .hero-capt
+    color $bg_col     
+    width @width - 60px
+    margin 0 auto 
+    text-align center
+    position relative
+    top -10px
+
+    &:after
+      display block
+      content ''
+      height 40px
+      width 300px
+      margin 0 auto
+      border-bottom 2px solid #374f5a
+      z-index 10
+
+    div
+      margin 10px 0px
+
+    .top
+      margin-top 0px
+      font-size 3.5em
+      font-family "Roboto Condensed"
+      font-weight bold
+
+    .mid
+      font-family 'Gentium Book Basic'
+      font-size 2em
+      font-style italic
+      &:before, &:after
+        content '———'
+        display inline-block
+        margin 0px 15px
+        letter-spacing -4px
+
+    .low
+      font-family "Roboto Condensed"
+      font-size 2.5em
+      line-height 110%
+
+  .hero-sub
+    padding-top 30px
+    font-size 1.2em
+    font-family 'Gentium Book Basic'
+    font-weight 400
+    font-style italic
+    color #374f5a
+    width 400px
+    text-align center
+    margin 0 auto
+    position relative
+    z-index 12
+
+
+
   
   &:after
   &:before
@@ -70,14 +134,7 @@ body
     border-top ($hex_height / 4) solid 
     bottom ($hex_height * -0.25)
 
-  clear both
-  &.left
-    float right
-    margin-right 50%
-  &.right
-    float left
-    margin-left 50%
-
+  margin ($hex_height * -0.25 - 50px) auto 0 
   &.about
     &:after, &:before
       border-bottom-color #aac22c
@@ -85,17 +142,60 @@ body
 
     background-color #aac22c
 
-  &.partners
+.hex
+  $hex_height = 3000px
+  height ($hex_height / 2)
+  width ($hex_height * 0.85)
+  position relative
+  
+  &:after
+  &:before
+    content ''
+    display block
+    position absolute
+    border-left (@width / 2) solid transparent
+    border-right @border-left
+    
+  &:before
+    border-bottom ($hex_height / 4) solid $bg_col
+    top ($hex_height * -0.25)
+  
+  &:after
+    border-top ($hex_height / 4) solid $bg_col
+    bottom ($hex_height * -0.25)
+      
+  background-color $bg_col
+
+  &.left
+    float right
+    margin-right 50%
+  &.right
+    float left
+    margin-left 50%
+  
+  &.left + &.right
+    margin-top (@height * -1)
+  &.right + &.left
+    margin-top (@height * 1)
+
+  .big-hex + &
+    margin-top (@height * 0.5)
+
+  &.center
+    position absolute
+    z-index 9
+    top 700px
+    height 500px
+    left 50%
+    margin-left (@width * -0.5) 
+    &:after
+      display none
+
+  &.info, &.team
     &:after, &:before
       border-bottom-color #374f5a
       border-top-color #374f5a
 
     background-color #374f5a
 
-  &.team
-    &:after, &:before
-      border-bottom-color #FF7F66
-      border-top-color #FF7F66
-
-    background-color #FF7F66
 
