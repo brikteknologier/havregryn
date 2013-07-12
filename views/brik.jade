@@ -2,10 +2,12 @@ doctype 5
 html
   head
     title BRIK
-    link(href='http://fonts.googleapis.com/css?family=Telex|Roboto+Condensed:400,700|Gentium+Book+Basic:400,400italic', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Inconsolata|Roboto+Condensed:400,700|Gentium+Book+Basic:400,400italic', rel='stylesheet', type='text/css')
+    link(href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css", rel="stylesheet")
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     .hero
+      video.scene(src="/images/nightscene.mp4", type="video/mp4", loop="loop", autoplay="autoplay")
       img.brik(src="/images/brik.svg")
     .hero-imposter
     .about.big-hex
@@ -14,4 +16,39 @@ html
         .mid for mobil og desktop
         .low der best mulig formidling til <strong>brukeren</strong> står i sentrum. 
       .hero-sub Vi utnytter potensialet i video, holder oss kontinuerlig oppdatert på hva som er mulig, samtidig som vi etterstreber å gjøre nye ting mulig. 
-    .info.hex.center
+    .content
+      .info.hex.center
+      .collaborators
+        :markdown
+          # Vi samarbeider med:
+          <insert collaborator logos here!>
+      .team
+        :markdown
+          # Hvem er vi?
+          * ![Bertin Holme Flatebø](http://i.imgur.com/PEksljn.jpg) **Bertin Holme Flatebø** *CEO & Daglig leder*
+          * ![Erlend Ketilson Stuve](http://i.imgur.com/gQOAxxU.jpg) **Erlend Ketilson Stuve** *Prosjektleder*
+          * ![Helge Skogly Holm](http://i.imgur.com/eBOojoh.jpg) **Helge Skogly Holm** *Teknisk utvikler*
+          * ![Jon Packer](http://i.imgur.com/8kpcnUE.jpg) **Jon Packer** *Teknisk utvikler*
+          * ![Magnus Hoff](http://i.imgur.com/gNFzajD.jpg) **Magnus Hoff** *Teknisk utvikler*
+
+      .minihex-leash
+        .minihex.center
+          .contact
+            .top Ta kontakt
+            .mid med oss!
+            .mode
+              .mode-head
+                i.icon-envelope
+              a(href="mailto:post@brik.no") 
+                | post@brik.no
+            .mode
+              .mode-head
+                i.icon-phone
+              | 55233600
+            .mode
+              .mode-head
+                i.icon-home
+              .address
+                .line Kong Christian Frederiks plass 3
+                .line Inngang B (<em>Slippen</em> bygning)
+                .line 5006 Bergen

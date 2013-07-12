@@ -4,7 +4,7 @@ body, html
   margin 0px
   padding 0px
   background-color $bg_col
-  font-family Telex
+  font-family "Roboto Condensed"
 
 body
   overflow-x hidden
@@ -12,7 +12,7 @@ body
 
 .hero
   // real height 1500/1125
-  $hero_height = 1920px
+  $hero_height = 1800px
   height 800px
   width ($hero_height * 0.85)
   background-image url(/images/nightscene.jpg)
@@ -21,6 +21,12 @@ body
   top 0px
   margin-left (@width * -0.5)
   left 50%
+  overflow hidden
+
+  .scene
+    width 100%
+    position absolute
+    z-index 1
   
   
   &:after
@@ -28,6 +34,7 @@ body
     content ''
     display block
     position absolute
+    z-index 2
     bottom 0px
     border-bottom ($hero_height / 4) solid $bg_col
   
@@ -40,6 +47,8 @@ body
   .brik
     width 1000px
     max-width 80%
+    position relative
+    z-index 3
     margin 0 auto
     display block
     padding-top 100px
@@ -53,12 +62,104 @@ body
   width 100%
   background-color #aac22c
 
+.content
+  width 100%
+  position relative
+  z-index 10
+  margin-top -175px
+  color white
+  box-sizing border-box
+  padding 400px 0px 0px
+  overflow hidden
+
+  h1, h2, h3, h4, h5
+    font-family "Roboto Condensed"
+
+  h1
+    font-size 3em
+
+  .collaborators, .team 
+    position relative
+    z-index 16
+
+  .collaborators
+    text-align center
+
+  .contact
+    text-align center
+    color #aac22c
+    .top
+      font-size 3em
+      font-family "Roboto Condensed"
+      padding-top 30px
+      font-weight bold
+    .mid
+      margin-top -15px
+      font-size 2em
+      font-family "Roboto Condensed"
+      margin-bottom 20px
+
+    .mode
+      font-family "Roboto Condensed"
+      font-size 1.4em
+      margin-bottom 10px
+
+      a
+        color mix(white, #aac22c, 60%)
+        &:hover
+          color #aac22c
+
+      .address
+        font-family Inconsolata
+        font-size 0.7em
+
+      .mode-head
+        &:before, &:after
+          display inline-block
+          content '——'
+          margin 10px
+          color #374f5a
+          letter-spacing -4px
+          font 'Gentium Book Basic'
+        color mix(white, #374f5a, 50%)
+        font-size 0.8em
+        margin-left -5px
+        &:before
+          margin-right 15px
+    
+
+  .team
+    margin-top 140px
+    text-align center
+    li 
+      list-style-type none
+      display inline-block
+      text-align center
+      width 150px
+
+      img
+        width 100px
+        border-radius 60px
+        box-shadow 0px 0px 0px 4px $bg_col
+        display inline-block
+
+      strong
+        font-family "Roboto Condensed"
+        display block
+
+      em
+        font-family "Gentium Book Basic"
+        font-size 0.9em
+        display block
+        margin 0px
+        color rgba(white, 50%)
+
 .big-hex
   $hex_height = 700px
   height ($hex_height / 2)
   width ($hex_height * 0.85)
   position relative
-  z-index 10
+  z-index 20
   overflow visible
 
   .hero-capt
@@ -183,9 +284,9 @@ body
 
   &.center
     position absolute
-    z-index 9
+    z-index 0
     top 700px
-    height 500px
+    height 1000px
     left 50%
     margin-left (@width * -0.5) 
     &:after
@@ -198,4 +299,36 @@ body
 
     background-color #374f5a
 
+.minihex-leash
+  width 100%
+  height 550px
+  overflow hidden
 
+.minihex
+  $hex_height = 600px 
+  height ($hex_height * 0.85 )
+  width ($hex_height / 2)
+  position relative
+  
+  &:after
+  &:before
+    content ''
+    display block
+    position absolute
+    border-top (@height / 2) solid transparent
+    border-bottom @border-top
+    top 0px
+    
+  &:before
+    border-right ($hex_height / 4) solid $bg_col
+    left ($hex_height * -0.25)
+  
+  &:after
+    border-left ($hex_height / 4) solid $bg_col
+    right ($hex_height * -0.25)
+      
+  background-color $bg_col
+
+  &.center
+    margin 100px auto 0
+    float none

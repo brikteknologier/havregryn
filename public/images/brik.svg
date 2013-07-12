@@ -20,7 +20,7 @@
     L9.26,27.078z M19.127,9.696l4.199-2.425l-0.001-4.848L19.126,0l-4.198,2.425l0.001,4.847L19.127,9.696z M28.385,15.89v-4.848
     l-4.198-2.423l-4.199,2.424v4.848l4.2,2.424L28.385,15.89z"/>
 	<filter id="dropshadow" height="130%">
-	  <feGaussianBlur result="blur-out" in="SourceAlpha" stdDeviation="0.5"/>
+	  <feGaussianBlur result="blur-out" in="SourceAlpha" stdDeviation="0.4"/>
     <feOffset dx="0" dy="0" in="blur-out" result="drop-shadow"/>
     <feMerge>
       <feMergeNode/>
