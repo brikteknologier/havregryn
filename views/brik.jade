@@ -18,18 +18,9 @@ html
       .hero-sub Vi utnytter potensialet i video, holder oss kontinuerlig oppdatert på hva som er mulig, samtidig som vi etterstreber å gjøre nye ting mulig. 
     .content
       .info.hex.center
-      .collaborators
+      .collaborators!= collabs
         :markdown
-          # Vi samarbeider med:
-          <insert collaborator logos here!>
-      .team
-        :markdown
-          # Hvem er vi?
-          * ![Bertin Holme Flatebø](http://i.imgur.com/PEksljn.jpg) **Bertin Holme Flatebø** *CEO & Daglig leder*
-          * ![Erlend Ketilson Stuve](http://i.imgur.com/gQOAxxU.jpg) **Erlend Ketilson Stuve** *Prosjektleder*
-          * ![Helge Skogly Holm](http://i.imgur.com/eBOojoh.jpg) **Helge Skogly Holm** *Teknisk utvikler*
-          * ![Jon Packer](http://i.imgur.com/8kpcnUE.jpg) **Jon Packer** *Teknisk utvikler*
-          * ![Magnus Hoff](http://i.imgur.com/gNFzajD.jpg) **Magnus Hoff** *Teknisk utvikler*
+      .team!= team
 
       .minihex-leash
         .minihex.center
