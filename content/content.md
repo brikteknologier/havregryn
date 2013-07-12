@@ -1,2 +1,2 @@
 # Vi samarbeider med:
-<insert collaborator logos here!>
+<insert samarbeider logos here!>
