@@ -1,2 +1,2 @@
 # Vi samarbeider med:
-<![OLT]//imgur.com/6Ooj46i)>
+<![OLT]http://imgur.com/6Ooj46i)>
