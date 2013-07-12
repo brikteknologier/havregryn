@@ -5,7 +5,10 @@
 
 var express = require('express')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , getit = require('getit')
+  , markdown = require('markdown').markdown
+  , async = require('async');
 
 var app = express();
 
@@ -21,7 +24,31 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+app.locals({ content: '', team: '' });
+
+// update content every 10 seconds
+(function update() {
+  async.parallel({
+    content: function(cb) {
+      getit('github://brikteknologier/havregryn/content/content.md', function(err, data) {
+        if (err) return cb(err);
+        cb(null, markdown.toHTML(data));
+      });
+    },
+    team: function(cb) {
+      getit('github://brikteknologier/havregryn/content/team.md', function(err, data) {
+        if (err) return cb(err);
+        cb(null, markdown.toHTML(data));
+      });
+    }
+  }, function(err, content) {
+    if (!err) app.locals(content);
+    setTimeout(update, 10000);
+  });
+})()
+
 app.get('/*', function(req, res) {
+
   res.render('brik');
 });
 

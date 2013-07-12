@@ -9,6 +9,8 @@
     "express": "3.1.2",
     "jade": "*",
     "stylus": "*",
-    "markdown": "~0.4.0"
+    "markdown": "~0.4.0",
+    "getit": "~0.3.1",
+    "async": "~0.2.9"
   }
 }
