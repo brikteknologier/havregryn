@@ -87,6 +87,35 @@ body {
 .content .collaborators {
   text-align: center;
 }
+.content .collaborators li {
+  list-style-type: none;
+  display: inline-block;
+  width: 160px;
+  padding: 10px 5px;
+}
+.content .collaborators li strong {
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+}
+.content .collaborators li a {
+  display: block;
+  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+  border-radius: 60px;
+  position: relative;
+  line-height: 100px;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0px 0px 0px 4px #232323;
+}
+.content .collaborators li a img {
+  display: none;
+}
 .content .contact {
   text-align: center;
   color: #aac22c;
@@ -293,7 +322,7 @@ body {
   position: absolute;
   z-index: 0;
   top: 700px;
-  height: 1000px;
+  height: 1500px;
   left: 50%;
   margin-left: -1275px;
 }

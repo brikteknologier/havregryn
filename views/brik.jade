@@ -42,3 +42,9 @@ html
                 .line Kong Christian Frederiks plass 3
                 .line Inngang B (<em>Slippen</em> bygning)
                 .line 5006 Bergen
+    script(type='text/javascript')
+      var sponsors = document.querySelectorAll('.collaborators a');
+      [].forEach.call(sponsors, function(sponsor) {
+        var img = sponsor.querySelector('img');
+        sponsor.style.backgroundImage = 'url(' +  img.src + ')';
+      });
